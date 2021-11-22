@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "537802506778",
+    "project_id": "sololife-a7da6",
+    "storage_bucket": "sololife-a7da6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537802506778:android:367c77b010cddd7c1787a3",
+        "android_client_info": {
+          "package_name": "com.example.mysololife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537802506778-qq1427vf8nnleor2greio2g40k4qsgl2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADcvuPK7k-YQiCtStg5F4GlO2sVMWyBSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537802506778-qq1427vf8nnleor2greio2g40k4qsgl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

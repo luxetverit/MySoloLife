@@ -27,6 +27,5 @@ class IntroActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
     }
 }

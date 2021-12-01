@@ -18,7 +18,6 @@ class TipFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
     }
 
     override fun onCreateView(
@@ -26,19 +25,19 @@ class TipFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_tip, container, false)
 
         binding.homeTap.setOnClickListener{
-            it.findNavController().navigate(R.id.action_talkFragment_to_homeFragment)
+            it.findNavController().navigate(R.id.action_tipFragment_to_homeFragment)
         }
         binding.talkTap.setOnClickListener{
-
+            it.findNavController().navigate(R.id.action_tipFragment_to_talkFragment)
         }
         binding.bookmarkTap.setOnClickListener{
-
+            it.findNavController().navigate(R.id.action_tipFragment_to_bookmarkFragment)
         }
         binding.storeTap.setOnClickListener{
-
+            it.findNavController().navigate(R.id.action_tipFragment_to_storeFragment)
         }
 
 

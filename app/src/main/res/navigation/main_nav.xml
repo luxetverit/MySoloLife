@@ -92,7 +92,7 @@
             android:id="@+id/action_tipFragment_to_storeFragment"
             app:destination="@id/storeFragment" />
         <action
-            android:id="@+id/action_tipFragment_to_storeFragment2"
-            app:destination="@id/storeFragment" />
+            android:id="@+id/action_tipFragment_to_talkFragment"
+            app:destination="@id/talkFragment" />
     </fragment>
 </navigation>

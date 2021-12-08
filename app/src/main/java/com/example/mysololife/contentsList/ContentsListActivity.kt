@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mysololife.R
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class ContentsListActivity : AppCompatActivity() {
 
@@ -19,9 +21,27 @@ class ContentsListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contents_list)
 
+        val database = Firebase.database("https://sololife-a7da6-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        val myRef = database.getReference("contents")
+
+        myRef.push().setValue(
+            ContentModel("title1", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1240?category=941578")
+        )
+        myRef.push().setValue(
+            ContentModel("title2", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1241?category=941578")
+        )
+        myRef.push().setValue(
+            ContentModel("title3", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1242?category=941578")
+        )
+        myRef.push().setValue(
+            ContentModel("title4", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1240?category=941578")
+        )
+
+
         val rv : RecyclerView = findViewById(R.id.rv)
 
         val items = ArrayList<ContentModel>()
+
         items.add(ContentModel("title1", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1240?category=941578"))
         items.add(ContentModel("title2", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1241?category=941578"))
         items.add(ContentModel("title3", "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOtaMq%2Fbtq67OMpk4W%2FH1cd0mda3n2wNWgVL9Dqy0%2Fimg.png", "https://philosopher-chan.tistory.com/1242?category=941578"))
@@ -41,8 +61,8 @@ class ContentsListActivity : AppCompatActivity() {
                 Toast.makeText(baseContext, items[position].title, Toast.LENGTH_LONG).show()
 
                 val intent = Intent(this@ContentsListActivity, ContentShowActivity::class.java)
-                intent.putExtra("url", items[position].webUrl) // item 배열 안에 있는 url 데이터 넘김
-                startActivity(intent)
+                //intent.putExtra("url", items[position].webUrl) // item 배열 안에 있는 url 데이터 넘김
+                //startActivity(intent)
             }
         }
 

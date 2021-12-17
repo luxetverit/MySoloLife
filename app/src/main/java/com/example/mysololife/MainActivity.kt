@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import com.example.mysololife.auth.IntroActivity
-import com.example.mysololife.auth.LoginActivity
-import com.example.mysololife.test.testHttpActivity
+import com.example.mysololife.test.TestHttpActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -34,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.testHttpBtn).setOnClickListener {
-            val intent = Intent(this, testHttpActivity::class.java)
+            val intent = Intent(this, TestHttpActivity::class.java)
             startActivity(intent)
         }
 

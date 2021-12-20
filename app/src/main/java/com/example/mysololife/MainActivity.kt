@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.logoutBtn).setOnClickListener {
+        /*findViewById<Button>(R.id.logoutBtn).setOnClickListener {
 
             auth.signOut()
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.testHttpBtn).setOnClickListener {
             val intent = Intent(this, TestHttpActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
 
     }

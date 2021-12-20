@@ -48,7 +48,6 @@ class TestHttpActivity : AppCompatActivity() {
                     response.body()?.let{
                         val resultcode = it.resultcode
                         val resultdesc = it.resultdesc
-                        val resultdata = it.resultdata
                         val resultJSON = response.body()
 
                         val list : List<ResultDataModel> = resultJSON!!.resultdata

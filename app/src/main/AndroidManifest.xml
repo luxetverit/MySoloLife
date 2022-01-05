@@ -16,7 +16,7 @@
         <activity android:name=".test.TestHttpActivity"></activity>
         <activity android:name=".contentsList.ContentShowActivity" />
         <activity android:name=".board.BoardWriteActivity" />
-        <activity android:name=".contentsList.ContentsListActivity" />
+        <activity android:name=".contentsList.ContentListActivity" />
         <activity android:name=".auth.JoinActivity" />
         <activity android:name=".auth.LoginActivity" />
         <activity android:name=".auth.IntroActivity" />

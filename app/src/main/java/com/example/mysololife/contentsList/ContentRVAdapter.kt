@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.mysololife.R
 
-class ContentsRVAdapter(val context : Context, val items : ArrayList<ContentModel>) : RecyclerView.Adapter<ContentsRVAdapter.ViewHolder>() {
+class ContentRVAdapter(val context : Context, val items : ArrayList<ContentModel>) : RecyclerView.Adapter<ContentRVAdapter.ViewHolder>() {
 
     interface ItemClick {
         fun onClick(view : View, position: Int)
@@ -20,12 +20,12 @@ class ContentsRVAdapter(val context : Context, val items : ArrayList<ContentMode
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ContentsRVAdapter.ViewHolder {
+    ): ContentRVAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.contents_rv_item, parent, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: ContentsRVAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ContentRVAdapter.ViewHolder, position: Int) {
 
         if(itemClick != null) {
             holder.itemView.setOnClickListener{ v->
